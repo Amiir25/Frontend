@@ -1,6 +1,6 @@
 # Simple Task Manager
 
-This is a simple responsive task manager web app which was built for online screening exam for internship position at **Kuraz Technologies**.
+This is a simple responsive task manager web app which was built for online screening exam for internship position at **[Kuraz Tech](https://www.kuraztech.com/)**.
 
 
 ## Features
