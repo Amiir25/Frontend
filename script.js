@@ -1,6 +1,9 @@
 const tasks = [
     { id: 1, title: 'Buy groceries', completed: false }, 
-    { id: 2, title: 'Read a book', completed: true } 
+    { id: 2, title: 'Do workout', completed: true },
+    { id: 3, title: 'Visit parents', completed: false },
+    { id: 4, title: 'Read a book', completed: false },
+    { id: 5, title: 'Go out for a walk', completed: false },
 ];
 
 const inputBox = document.getElementById('input-box');
@@ -13,6 +16,10 @@ for (let task of tasks) {
     let li = document.createElement('li');
     li.innerHTML = `${task.id}. ${task.title}`;
     taskContainer.appendChild(li);
+
+    if (task.completed) {
+        li.classList.add('checked');
+    }
 
     // Add x icon
     let icon = document.createElement('i');
