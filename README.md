@@ -1,7 +1,6 @@
 # Simple Task Manager
 
-This is a simple responsive task manager web app which i built it for live screening exam for internship role at **Kuraz Technologies**.
-containing features of displaying existing tasks, adding new tasks, marking uncheked for finished tasks and deleting tasks that are not wanted any more.
+This is a simple responsive task manager web app which was built for online screening exam for internship position at **Kuraz Technologies**.
 
 
 ## Features
@@ -22,6 +21,6 @@ containing features of displaying existing tasks, adding new tasks, marking unch
 
 - **HTML**
 - **CSS** – layout and styling
-- **JavaScript (Vanilla)** – Render existing tasks and all other functionalities.
+- **JavaScript (Vanilla)** – All the functionalities.
 
 [View the live demo](https://amiir25.github.io/eventER/)
