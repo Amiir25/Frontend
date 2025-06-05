@@ -5,21 +5,37 @@ const tasks = [
 
 const inputBox = document.getElementById('input-box');
 const taskContainer = document.getElementById('task-container');
+let numberOfTasks = tasks.length;
+
+// Add tasks
+for (let task of tasks) {
+    // Add task
+    let li = document.createElement('li');
+    li.innerHTML = `${task.id}. ${task.title}`;
+    taskContainer.appendChild(li);
+
+    // Add x icon
+    let icon = document.createElement('i');
+    icon.setAttribute('class', 'fa-solid fa-circle-xmark');
+    li.appendChild(icon);
+}
 
 // Add new task
 const addTask = () => {
     if (inputBox.value === '') {
         alert("Enter a task to add!");
     } else {
-        // Add task
-        let task = document.createElement('li');
-        task.innerHTML = inputBox.value;
-        taskContainer.appendChild(task);
+        numberOfTasks++;
 
-        // Add X arrow
+        // Add new task
+        let li = document.createElement('li');
+        li.innerHTML = `${numberOfTasks}. ${inputBox.value}`;
+        taskContainer.appendChild(li);
+
+        // Add X icon
         let icon = document.createElement('i');
         icon.setAttribute('class', 'fa-solid fa-circle-xmark');
-        task.appendChild(icon);
+        li.appendChild(icon);
     }
     // Clear the input box after add
     inputBox.value = '';
@@ -40,4 +56,5 @@ taskContainer.addEventListener('click', (e) => {
 // Delete task
 document.querySelector('.fa-circle-xmark').addEventListener('click', (e) => {
     e.target.parentElement.remove();
+    numberOfTasks--;
 })
