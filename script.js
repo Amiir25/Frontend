@@ -10,22 +10,25 @@ const inputBox = document.getElementById('input-box');
 const taskContainer = document.getElementById('task-container');
 let numberOfTasks = tasks.length;
 
-// Add tasks
-for (let task of tasks) {
-    // Add task
-    let li = document.createElement('li');
-    li.innerHTML = `${task.id}. ${task.title}`;
-    taskContainer.appendChild(li);
+// View tasks
+const viewTasks = () => {
+    for (let task of tasks) {
+        let li = document.createElement('li');
+        li.innerHTML = `
+            <div style="display: flex; gap: 10px">
+                <span>${task.id}</span>
+                <h4>${task.title}</h4>
+            </div>
+            <i class="fa-solid fa-circle-xmark">
+        `;
+        taskContainer.appendChild(li);
 
-    if (task.completed) {
-        li.classList.add('checked');
+        if (task.completed) {
+            li.classList.add('checked');
+        }
     }
-
-    // Add x icon
-    let icon = document.createElement('i');
-    icon.setAttribute('class', 'fa-solid fa-circle-xmark');
-    li.appendChild(icon);
 }
+viewTasks();
 
 // Add new task
 const addTask = () => {
@@ -33,16 +36,16 @@ const addTask = () => {
         alert("Enter a task to add!");
     } else {
         numberOfTasks++;
-
-        // Add new task
+        // Add new task 
         let li = document.createElement('li');
-        li.innerHTML = `${numberOfTasks}. ${inputBox.value}`;
+        li.innerHTML = `
+            <div style="display: flex; gap: 10px">
+                <span>${numberOfTasks}</span>
+                <h4>${inputBox.value}</h4>
+            </div>
+            <i class="fa-solid fa-circle-xmark">
+        `;
         taskContainer.appendChild(li);
-
-        // Add X icon
-        let icon = document.createElement('i');
-        icon.setAttribute('class', 'fa-solid fa-circle-xmark');
-        li.appendChild(icon);
     }
     // Clear the input box after add
     inputBox.value = '';
