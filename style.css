@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #ed1234, #ff49de);
+}
+
+.task-manager {
+    width: 100%;
+    max-width: 540px;
+    margin: auto;
+    background-color: #fff;
+    padding: 50px 30px 70px;
+    border-radius: 10px;
+}
+
+.task-manager h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #ed1234;
+}
+
+.input-filed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ddd;
+    padding-left: 20px;
+    border-radius: 30px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+}
+
+button {
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 20px 50px;
+    font-size: 20px;
+    border-radius: 40px;
+    background: #ed1234;
+    cursor: pointer;
+}
+
+/*  */
+ul {
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+ul li {
+    list-style: none;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.checked {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+/* delete icon */
+i {
+    font-size: 28px;
+    color: #ff49de;
+    background: transparent;
+}
+
+i:hover {
+    color: #ed1234;
+}
